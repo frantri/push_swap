@@ -6,7 +6,7 @@
 /*   By: ftriquet <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/25 06:27:08 by ftriquet          #+#    #+#             */
-/*   Updated: 2016/02/25 06:27:36 by ftriquet         ###   ########.fr       */
+/*   Updated: 2016/02/25 06:46:03 by ftriquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	sort_stack(t_stack *a, t_stack *b)
 
 	if (g_v_opt)
 		print_stacks(a, b);
-	while (!check_top(a) || !check_last_push(a, b) || !empty(b))
+	while (!check_top(a, b) || !check_last_push(a, b) || !empty(b))
 	{
 		if (get_min_max(a, min_max, min_max + 1) == 1)
 			rot_to_min(a, b, min_max, 0);
@@ -29,12 +29,12 @@ void	sort_stack(t_stack *a, t_stack *b)
 	}
 }
 
-int		check_top(t_stack *a)
+int		check_top(t_stack *a, t_stack *b)
 {
 	if (a->size >= 2 && a->size <= 10 &&
 			a->top->value > a->top->next->value)
 	{
-		do_op(a, NULL, "sa");
+		do_op(a, b, "sa");
 	}
 	return (1);
 }

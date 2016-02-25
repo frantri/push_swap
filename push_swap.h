@@ -6,7 +6,7 @@
 /*   By: ftriquet <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/25 06:28:38 by ftriquet          #+#    #+#             */
-/*   Updated: 2016/02/25 06:28:40 by ftriquet         ###   ########.fr       */
+/*   Updated: 2016/02/25 06:45:47 by ftriquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ int						is_int(char *arg);
 int						check_args(char **av, t_stack *stack);
 int						check_opt(char *av);
 int						interactive_stack(t_stack *a, t_stack *b);
-int						check_top(t_stack *a);
+int						check_top(t_stack *a, t_stack *b);
 
 int						check_last_push(t_stack *a, t_stack*b);
 void					rot_to_min(t_stack *a, t_stack *b,
