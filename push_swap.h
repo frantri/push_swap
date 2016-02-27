@@ -6,7 +6,7 @@
 /*   By: ftriquet <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/25 06:28:38 by ftriquet          #+#    #+#             */
-/*   Updated: 2016/02/25 06:45:47 by ftriquet         ###   ########.fr       */
+/*   Updated: 2016/02/27 01:04:12 by ftriquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ extern int				g_v_opt;
 extern int				g_interactive_opt;
 extern t_opcode			g_last_op;
 
+void					check_bottom(t_stack *a, t_stack *b);
 int						exit_error(int	errcode, int line);
 int						rotate_r(t_stack *stack);
 int						rotate(t_stack *stack);
